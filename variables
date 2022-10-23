@@ -1,0 +1,5 @@
+SERVICE_DOCKER="soap-rest-performance-comparison-app"
+DB_DOCKER="soap-rest-performance-comparison-postgres"
+
+DB_NAME="soap-rest-performance-comparison-db"
+DB_USER="user"

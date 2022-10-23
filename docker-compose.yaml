@@ -1,0 +1,22 @@
+version: '3.9'
+services:
+  app:
+    container_name: soap-rest-performance-comparison-app
+    networks:
+      soap-rest-performance-comparison-net:
+        ipv4_address: 172.80.0.2
+    volumes:
+      - ./:/var/www/html/soap-rest-performance-comparison
+    image: soap-rest-performance-comparison-image
+    build:
+      context: .
+      dockerfile: Dockerfile
+
+networks:
+  soap-rest-performance-comparison-net:
+    name: soap-rest-performance-comparison-net
+    driver: bridge
+    ipam:
+      driver: default
+      config:
+        - subnet: 172.80.0.0/28
