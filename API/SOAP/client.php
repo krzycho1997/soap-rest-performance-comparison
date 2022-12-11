@@ -1,10 +1,16 @@
 <?php
 
 // model
+class Page
+{
+    public $count;
+}
+
 class Book
 {
     public $name;
     public $year;
+    public Page $page;
 }
 
 // create instance and set a book name
